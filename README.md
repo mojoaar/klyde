@@ -2,6 +2,7 @@
 
 [![Latest Release](https://img.shields.io/github/v/tag/mojoaar/klyde?label=version&color=7c3aed)](https://github.com/mojoaar/klyde/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-7c3aed)](LICENSE)
+[![Buy Me a Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-☕-7c3aed)](https://buymeacoffee.com/mojoaar)
 
 A terminal UI for tracking keyboard shortcuts and configuration files/directories.
 
@@ -101,6 +102,8 @@ make clean      # remove dist/
 
 Morten Johansen | [johansen.foo](https://johansen.foo)  
 [github.com/mojoaar/klyde](https://github.com/mojoaar/klyde)
+
+If you find klyde useful, [buy me a coffee ☕](https://buymeacoffee.com/mojoaar)
 
 ## Changelog
 
