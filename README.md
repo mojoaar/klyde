@@ -1,6 +1,7 @@
 # klyde
 
 [![Latest Release](https://img.shields.io/github/v/tag/mojoaar/klyde?label=version&color=7c3aed)](https://github.com/mojoaar/klyde/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-7c3aed)](LICENSE)
 
 A terminal UI for tracking keyboard shortcuts and configuration files/directories.
 
