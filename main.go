@@ -9,6 +9,9 @@ import (
 	"github.com/mojoaar/klyde/internal/ui"
 )
 
+// version is set at build time via -ldflags "-X main.version=..."
+var version = "dev"
+
 func main() {
 	store, err := data.Load()
 	if err != nil {
@@ -16,7 +19,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	app := ui.NewApp(store)
+	app := ui.NewApp(store, version)
 	p := tea.NewProgram(app, tea.WithAltScreen())
 	if _, err := p.Run(); err != nil {
 		fmt.Fprintf(os.Stderr, "klyde: %v\n", err)

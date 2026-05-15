@@ -23,6 +23,7 @@ const (
 
 type App struct {
 	store   *data.Store
+	version string
 	mode    appMode
 	sidebar Sidebar
 	list    ListView
@@ -43,7 +44,7 @@ const (
 	focusList
 )
 
-func NewApp(store *data.Store) App {
+func NewApp(store *data.Store, version string) App {
 	sb := NewSidebar()
 	lv := NewListView()
 	si := textinput.New()
@@ -52,6 +53,7 @@ func NewApp(store *data.Store) App {
 
 	app := App{
 		store:   store,
+		version: version,
 		sidebar: sb,
 		list:    lv,
 		confirm: NewConfirm(),
@@ -453,7 +455,7 @@ func (a App) viewHelp() string {
 	}
 
 	var rows []string
-	rows = append(rows, FormTitleStyle.Render("klyde — help"))
+	rows = append(rows, FormTitleStyle.Render(fmt.Sprintf("klyde %s — help", a.version)))
 	rows = append(rows, "")
 
 	for _, s := range sections {

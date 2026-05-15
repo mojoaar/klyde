@@ -35,13 +35,14 @@ windows-amd64:
 
 ## install: install klyde to ~/go/bin (make sure ~/go/bin is in your PATH)
 install:
-	go install .
+	go install $(LDFLAGS) .
 
 ## uninstall: remove klyde from ~/go/bin
 uninstall:
 	rm -f $(shell go env GOPATH)/bin/$(APP)
 
-
+## clean: remove dist/
+clean:
 	rm -rf $(DIST)
 
 ## help: show this message

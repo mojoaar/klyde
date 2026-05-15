@@ -1,5 +1,7 @@
 # klyde
 
+[![Latest Release](https://img.shields.io/github/v/tag/mojoaar/klyde?label=version&color=7c3aed)](https://github.com/mojoaar/klyde/releases)
+
 A terminal UI for tracking keyboard shortcuts and configuration files/directories.
 
 ```
@@ -8,6 +10,21 @@ A terminal UI for tracking keyboard shortcuts and configuration files/directorie
 /_/\_\/_/\_, /\_,_/\__/ 
         /___/           
 ```
+
+## Screenshots
+
+![klyde shortcuts view](assets/klyde01.png)
+![klyde configs view](assets/klyde02.png)
+
+## Features
+
+- **Shortcuts** — track key combos with name, key, app/context, and tags
+- **Configs** — track config file/directory paths with name, path, type, and tags
+- Add, edit, and delete entries interactively
+- Live search/filter within each section
+- Alphabetically sorted lists
+- Help overlay with keybindings and data file location
+- Cross-platform: macOS, Linux, Windows
 
 ## Installation
 
@@ -23,13 +40,15 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 ### From source
 ```sh
-git clone <repo>
+git clone https://github.com/mojoaar/klyde.git
 cd klyde
 make install   # builds and installs to ~/go/bin
 ```
 
 ### Pre-built binaries
 Run `make build` to compile for all platforms — binaries are placed in `dist/`.
+
+## Data
 
 Data is stored at:
 
@@ -79,4 +98,16 @@ make clean      # remove dist/
 
 ## Author
 
-Morten Johansen | johansen.foo
+Morten Johansen | [johansen.foo](https://johansen.foo)  
+[github.com/mojoaar/klyde](https://github.com/mojoaar/klyde)
+
+## Changelog
+
+### v0.1.0
+- Initial release
+- Add, edit, delete keyboard shortcuts and config paths
+- Live search/filter within each section
+- Alphabetical sorting by name
+- Help overlay with keybindings, data file path, and version
+- Cross-platform: macOS, Linux, Windows
+- Data stored at `~/.config/klyde/data.json` (macOS/Linux) or `%AppData%\klyde\data.json` (Windows)
